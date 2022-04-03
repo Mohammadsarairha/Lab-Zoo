@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\DotnetProject\\Zoo\\Zoo\\Zoo.csproj",
+      "projectUniqueName": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\Zoo\\Zoo.csproj",
       "projectName": "Zoo",
-      "projectPath": "C:\\Users\\HP\\DotnetProject\\Zoo\\Zoo\\Zoo.csproj",
+      "projectPath": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\Zoo\\Zoo.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\DotnetProject\\Zoo\\Zoo\\obj\\",
+      "outputPath": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\Zoo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

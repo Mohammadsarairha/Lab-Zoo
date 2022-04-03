@@ -63,34 +63,31 @@ namespace Zoo
 
     public abstract class Mammal : Animal
     {
-        
+        public void Skin()
+        {
+            Console.WriteLine("All Mammal have Skin");
+        }
     }
 
     public abstract class Bird : Animal
     {
-       
+        public void Feathers()
+        {
+            Console.WriteLine("All Birds have feathers");
+        }
     }
 
     public abstract class Fish : Animal
     {
-        
+        public void FishGills()
+        {
+            Console.WriteLine("All Fishs have Fish Gills");
+        }
     }
 
     public class Lion : Mammal , IOrganism,IAnimal
     {
-
-        public override string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = "Lion";
-            }
-        }
-
+        public override string name{get;set;}
         public override string gender { get; set; }
 
         public override double weight { get; set; }
@@ -144,18 +141,7 @@ namespace Zoo
 
     public class Dog : Mammal ,IOrganism,IAnimal
     {
-        public override string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = "Dog";
-            }
-        }
-
+       public override string name{get;set;}
         public override string gender {get;set;}
 
         public override double weight{get; set;}
@@ -209,18 +195,7 @@ namespace Zoo
 
     public class Shark : Fish ,IOrganism,IAnimal ,IFish
     {
-        public override string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = "Shark";
-            }
-        }
-
+        public override string name{get;set;}
         public override string gender { get; set; }
 
         public override double weight { get; set; }
@@ -284,18 +259,7 @@ namespace Zoo
     public class Falcon : Bird ,IOrganism ,IAnimal ,IBird
     {
 
-        public override string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = "Falcon";
-            }
-        }
-
+        public override string name{get;set;}
         public override string gender { get; set; }
 
         public override double weight { get; set; }
@@ -371,17 +335,7 @@ namespace Zoo
 
     public class Sheep : Mammal ,IOrganism,IAnimal
     {
-        public override string name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = "Sheep";
-            }
-        }
+        public override string name{get;set;}
 
         public override string gender { get; set; }
 

@@ -5938,11 +5938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\DotnetProject\\Zoo\\TestLab06\\TestLab06.csproj",
+      "projectUniqueName": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\TestLab06\\TestLab06.csproj",
       "projectName": "TestLab06",
-      "projectPath": "C:\\Users\\HP\\DotnetProject\\Zoo\\TestLab06\\TestLab06.csproj",
+      "projectPath": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\TestLab06\\TestLab06.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\DotnetProject\\Zoo\\TestLab06\\obj\\",
+      "outputPath": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\TestLab06\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5959,8 +5959,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\HP\\DotnetProject\\Zoo\\Zoo\\Zoo.csproj": {
-              "projectPath": "C:\\Users\\HP\\DotnetProject\\Zoo\\Zoo\\Zoo.csproj"
+            "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\Zoo\\Zoo.csproj": {
+              "projectPath": "\\\\wsl$\\Ubuntu\\home\\mohammad\\Github-projects\\Lab-Zoo\\Zoo\\Zoo\\Zoo.csproj"
             }
           }
         }
