@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    public abstract class Animal
+    public abstract class Animal  
     {
         public abstract string name { get; set; }
         public abstract string gender { get; set; }
@@ -31,86 +31,19 @@ namespace Zoo
         {
             return true;
         }
-        public abstract string Growth();
-    }
-
-    interface IOrganism
-    {
-        string Respiration();
-        string Movement();
     }
 
     interface IAnimal
     {
-        string Multicellular();
-        string Reproduce();
+        void Growth();
     }
 
-    interface IBird
+    public class Lion : Mammal,IMammal
     {
-        string Fly();
-        string Vertebrates();
-        string WarmBlooded();
-        string Wings();
-        string Wings(string feathers);
-    }
-
-    interface IFish
-    {
-        string Swim();
-        string ColdBlooded();
-    }
-
-    public abstract class Mammal : Animal
-    {
-        public void Skin()
-        {
-            Console.WriteLine("All Mammal have Skin");
-        }
-    }
-
-    public abstract class Bird : Animal
-    {
-        public void Feathers()
-        {
-            Console.WriteLine("All Birds have feathers");
-        }
-    }
-
-    public abstract class Fish : Animal
-    {
-        public void FishGills()
-        {
-            Console.WriteLine("All Fishs have Fish Gills");
-        }
-    }
-
-    public class Lion : Mammal , IOrganism,IAnimal
-    {
-        public override string name{get;set;}
+        public override string name { get; set; }
         public override string gender { get; set; }
-
         public override double weight { get; set; }
 
-        public string Respiration()
-        {
-            return "Respiration";
-        }
-
-        public string Movement()
-        {
-            return "Run";
-        }
-
-        public string Multicellular()
-        {
-            return "Multicellular";
-        }
-
-        public string Reproduce()
-        {
-            return "Reproduce";
-        }
 
         public override string Sound()
         {
@@ -131,40 +64,23 @@ namespace Zoo
         {
             return true;
         }
-
-        public override string Growth()
+        void IMammal.Reproduction()
         {
-            return "growth";
+            Console.WriteLine("Lion reproduction by childbirth");
+        }
+
+        void IMammal.Skin()
+        {
+            Console.WriteLine("Lion have coat");
         }
     }
 
 
-    public class Dog : Mammal ,IOrganism,IAnimal
+    public class Dog : Mammal, IMammal
     {
-       public override string name{get;set;}
-        public override string gender {get;set;}
-
-        public override double weight{get; set;}
-
-        public string Respiration()
-        {
-            return "Respiration";
-        }
-
-        public string Movement()
-        {
-            return "Run";
-        }
-
-        public string Multicellular()
-        {
-            return "Multicellular";
-        }
-
-        public string Reproduce()
-        {
-            return "Reproduce";
-        }
+        public override string name { get; set; }
+        public override string gender { get; set; }
+        public override double weight { get; set; }
 
 
         public override string Sound()
@@ -186,49 +102,23 @@ namespace Zoo
         {
             return true;
         }
-        public override string Growth()
+
+        void IMammal.Reproduction()
         {
-            return "growth";
+            Console.WriteLine("Dog reproduction by childbirth");
         }
 
+        void IMammal.Skin()
+        {
+            Console.WriteLine("Dog have coat");
+        }
     }
 
-    public class Shark : Fish ,IOrganism,IAnimal ,IFish
+    public class Shark : Fish, IFish
     {
-        public override string name{get;set;}
+        public override string name { get; set; }
         public override string gender { get; set; }
-
         public override double weight { get; set; }
-
-        public string Respiration()
-        {
-            return "Respiration";
-        }
-
-        public string Movement()
-        {
-            return "Run";
-        }
-
-        public string Multicellular()
-        {
-            return "Multicellular";
-        }
-
-        public string Reproduce()
-        {
-            return "Reproduce";
-        }
-
-        public string Swim()
-        {
-            return "swim";
-        }
-
-        public string ColdBlooded()
-        {
-            return "ColdBlooded";
-        }
 
         public override string Sound()
         {
@@ -249,63 +139,28 @@ namespace Zoo
         {
             return true;
         }
-        public override string Growth()
+
+        void IFish.Swim()
         {
-            return "growth";
+            throw new NotImplementedException();
         }
 
+        void IFish.ColdBlooded()
+        {
+            Console.WriteLine($"{name} is coldBlooded");
+        }
     }
 
-    public class Falcon : Bird ,IOrganism ,IAnimal ,IBird
+    public class Falcon : Bird, IBird
     {
 
-        public override string name{get;set;}
+        public override string name { get; set; }
         public override string gender { get; set; }
-
         public override double weight { get; set; }
 
-        public string Respiration()
+        public Falcon()
         {
-            return "Respiration";
-        }
-
-        public string Movement()
-        {
-            return "fly";
-        }
-
-        public string Multicellular()
-        {
-            return "Multicellular";
-        }
-
-        public string Reproduce()
-        {
-            return "Reproduce";
-        }
-
-        public string Fly()
-        {
-            return "fly";
-        }
-
-        public string Vertebrates()
-        {
-            return "Vertebrates";
-        }
-
-        public string WarmBlooded()
-        {
-            return "WarmBlooded";
-        }
-
-        public string Wings()
-        {
-            return "Wings";
-        }
-        public string Wings(string feathers)
-        {
-            return "Wings";
+            this.name = "Falcon";
         }
 
         public override string Sound()
@@ -327,40 +182,30 @@ namespace Zoo
         {
             return true;
         }
-        public override string Growth()
+
+        string IBird.Fly()
         {
-            return "growth";
+            return $"{name} Fly";
+        }
+
+        void IBird.Wings()
+        {
+            Console.WriteLine("Wings without feathers");
+        }
+
+        void IBird.Wings(string feathers)
+        {
+            Console.WriteLine("Wings with feathers");
         }
     }
 
-    public class Sheep : Mammal ,IOrganism,IAnimal
+    public class Sheep : Mammal ,IMammal
     {
-        public override string name{get;set;}
+        public override string name { get; set; }
 
         public override string gender { get; set; }
 
         public override double weight { get; set; }
-
-        public string Respiration()
-        {
-            return "Respiration";
-        }
-
-        public string Movement()
-        {
-            return "Run";
-        }
-
-        public string Multicellular()
-        {
-            return "Multicellular";
-        }
-
-        public string Reproduce()
-        {
-            return "Reproduce";
-        }
-
 
         public override string Sound()
         {
@@ -381,9 +226,15 @@ namespace Zoo
         {
             return true;
         }
-        public override string Growth()
+        
+        void IMammal.Reproduction()
         {
-            return "growth";
+            Console.WriteLine("Sheep reproduction by childbirth");
+        }
+
+        void IMammal.Skin()
+        {
+            Console.WriteLine("sheep fur");
         }
     }
 
